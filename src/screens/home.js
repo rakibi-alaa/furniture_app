@@ -27,7 +27,7 @@ export default class Home extends React.Component{
         return(
             <Container >
                 <View style={{paddingHorizontal : 15,paddingTop : 10}}>
-                    <Header>
+                <Header>
                         <HeaderTitle>Dashboard</HeaderTitle>
                         <Svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFF" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <Path stroke="none" d="M0 0h24v24H0z"/>
