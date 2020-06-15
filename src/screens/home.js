@@ -45,7 +45,7 @@ export default class Home extends React.Component{
                     <Categories />
                     
                 </View>
-                
+                <List />
             </Container>
         )
     }
