@@ -1,0 +1,25 @@
+{
+    "categories":[
+        {
+            "id" : 1,
+            "title" : "All"
+        },
+        {
+            "id" : 2,
+            "title" : "Sofa"
+        },
+        {
+            "id" : 3,
+            "title" : "Park bench"
+        },
+        {
+            "id" : 4,
+            "title" : "Armchair"
+        },
+        {
+            "id" : 5,
+            "title" : "Office chair test"
+        }
+    ],
+    "items" : []
+}

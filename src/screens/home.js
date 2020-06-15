@@ -2,12 +2,17 @@ import React from 'react';
 import {SafeAreaView,View,Text} from 'react-native'
 import styled from 'styled-components';
 import Svg, { Circle, Line,Path,G } from 'react-native-svg';
+
 import SearchBar from '../components/searchBar'
+import Categories from '../components/categories'
+import List from '../components/list'
+
 const Container = styled.SafeAreaView`
 width : 100%;
 height:100%;
 background-color : #0459a5;
 position : relative;
+padding : 50%;
 
 `
 const Header = styled.View`
@@ -25,7 +30,7 @@ font-weight : 700;
 export default class Home extends React.Component{
     render(){
         return(
-            <Container >
+            <Container>
                 <View style={{paddingHorizontal : 15,paddingTop : 10}}>
                 <Header>
                         <HeaderTitle>Dashboard</HeaderTitle>
@@ -35,9 +40,12 @@ export default class Home extends React.Component{
                             <Circle cx="19" cy="15" r="3" fill="red" />
                             <Path d="M9 17v1a3 3 0 0 0 6 0v-1" />  
                         </Svg>
-                    </Header>
+                </Header>
                     <SearchBar />
+                    <Categories />
+                    
                 </View>
+                
             </Container>
         )
     }
