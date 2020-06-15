@@ -21,5 +21,30 @@
             "title" : "Office chair test"
         }
     ],
-    "items" : []
+    "products" : [
+        {
+            "id": 1,
+            "price": 56,
+            "title": "Classic Leather Arm Chair",
+            "image": "https://raw.githubusercontent.com/abuanwar072/furniture_app_flutter/master/assets/images/Item_1.png",
+            "description":
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+        },
+        {
+            "id": 2,
+            "price": 56,
+            "title": "Classic Leather Arm Chair",
+            "image": "https://raw.githubusercontent.com/abuanwar072/furniture_app_flutter/master/assets/images/Item_2.png",
+            "description":
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+        },
+        {
+            "id": 3,
+            "price": 56,
+            "title": "Classic Leather Arm Chair",
+            "image": "https://raw.githubusercontent.com/abuanwar072/furniture_app_flutter/master/assets/images/Item_3.png",
+            "description":
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
+        }
+    ]
 }
