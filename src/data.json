@@ -32,16 +32,16 @@
         },
         {
             "id": 2,
-            "price": 56,
-            "title": "Classic Leather Arm Chair",
+            "price": 68,
+            "title": "Poppy Plastic Tub Chair",
             "image": "https://raw.githubusercontent.com/abuanwar072/furniture_app_flutter/master/assets/images/Item_2.png",
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"
         },
         {
             "id": 3,
-            "price": 56,
-            "title": "Classic Leather Arm Chair",
+            "price": 39,
+            "title": "Bar Stool Chair",
             "image": "https://raw.githubusercontent.com/abuanwar072/furniture_app_flutter/master/assets/images/Item_3.png",
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim"

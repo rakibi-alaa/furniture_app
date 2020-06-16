@@ -56,40 +56,45 @@ const ItemPriceContainer = styled.View`
 `
 
 
-const _renderItem = ({item,index}) =>{
-    console.log(item.image)
-    return (
-        <TouchableWithoutFeedback onPress={()=>{alert('here')}}>
-            <Item key={item.id} style={{borderRightWidth : 5,borderRightColor: index %2 == 0 ? '#329ba8' : 'coral',shadowColor: "#000",shadowOffset: {width: 0,height: 2,},shadowOpacity: 0.13,shadowRadius: 2.62,elevation: 2}}>
-                <ItemInnerContainer >
-                    <ItemDetail style={{borderRadius : 20}}>
-                        <ItemTitle>{item.title}</ItemTitle>
-                        <ItemPriceContainer style={{borderTopRightRadius : 20}}>
-                            <Text>{item.price} $</Text>
-                        </ItemPriceContainer>
-                    </ItemDetail>
-                    
-                    <SharedElement width="50%"  id={`item.${item.id}.photo`}>
-                        <Image source={{uri :item.image}} style={{width : 170,height : 160,top:-30,alignSelf: 'center'}} />
-                    </SharedElement>
-                   
-                    
-                </ItemInnerContainer>
-            </Item>
-        </TouchableWithoutFeedback>
-    )
-}
-export default function List() {
-    return (
-        <Container >
-            <BackDrop style={{borderTopLeftRadius:50,borderTopRightRadius:50}} />
-            <FlatList
-            style={{marginBottom : 150}}
-                showsVerticalScrollIndicator={true}
-                contentContainerStyle={{paddingHorizontal:20,paddingTop:30}}
-                data={data.products} 
-                renderItem={_renderItem}
-                keyExtractor={item => item.id + ''}/>
-        </Container>
-    ) 
+
+export default class List extends React.PureComponent{
+
+
+     _renderItem = ({item,index}) =>{
+        console.log(item.image)
+        return (
+            <TouchableWithoutFeedback onPress={()=>{this.props.navigation.push('Product',{item})}}>
+                <Item key={item.id} style={{borderRightWidth : 5,borderRightColor: index %2 == 0 ? '#329ba8' : 'coral',shadowColor: "#000",shadowOffset: {width: 0,height: 2,},shadowOpacity: 0.13,shadowRadius: 2.62,elevation: 2}}>
+                    <ItemInnerContainer >
+                        <ItemDetail style={{borderRadius : 20}}>
+                            <ItemTitle>{item.title}</ItemTitle>
+                            <ItemPriceContainer style={{borderTopRightRadius : 20}}>
+                                <Text>{item.price} $</Text>
+                            </ItemPriceContainer>
+                        </ItemDetail>
+                        
+                        <SharedElement width="50%"  id={item.id}>
+                            <Image source={{uri :item.image}} style={{width : 170,height : 160,top:-30,alignSelf: 'center'}} />
+                        </SharedElement>
+                    </ItemInnerContainer>
+                </Item>
+            </TouchableWithoutFeedback>
+        )
+    }
+
+    render(){
+        return (
+            <Container >
+                <BackDrop style={{borderTopLeftRadius:50,borderTopRightRadius:50}} />
+                <FlatList
+                style={{marginBottom : 150}}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{paddingHorizontal:20,paddingTop:30}}
+                    data={data.products} 
+                    renderItem={this._renderItem}
+                    keyExtractor={item => item.id + ''}/>
+            </Container>
+        ) 
+    }
+    
 }
