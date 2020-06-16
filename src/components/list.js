@@ -10,7 +10,7 @@ const Container = styled.View`
     height : 100%;
     margin : 25px 0px;
 `
-const BackDrop = styled.TouchableOpacity`
+const BackDrop = styled.View`
     width : ${width}px;
     height : 93%;
     background-color : #f4f4f4;
@@ -61,7 +61,6 @@ export default class List extends React.PureComponent{
 
 
      _renderItem = ({item,index}) =>{
-        console.log(item.image)
         return (
             <TouchableWithoutFeedback onPress={()=>{this.props.navigation.push('Product',{item})}}>
                 <Item key={item.id} style={{borderRightWidth : 5,borderRightColor: index %2 == 0 ? '#329ba8' : 'coral',shadowColor: "#000",shadowOffset: {width: 0,height: 2,},shadowOpacity: 0.13,shadowRadius: 2.62,elevation: 2}}>
